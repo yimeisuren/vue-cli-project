@@ -1,6 +1,6 @@
 <template>
-  <div id="indexPage">
-
+  <div class="indexPage">
+    Page文字
   </div>
 </template>
 
@@ -10,6 +10,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped >
+.indexPage {
+  height: 500px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 30px;
+  background-color: orange;
+  color: white;
+}
 
 </style>

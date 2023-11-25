@@ -1,6 +1,6 @@
 <template>
-  <div id="indexHeader">
-
+  <div class="indexHeader">
+    Header文字
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped >
 h3 {
   margin: 40px 0 0;
 }
@@ -27,5 +27,14 @@ li {
 
 a {
   color: #42b983;
+}
+
+.indexHeader {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 30px;
+  background-color: orchid;
+  color: white;
 }
 </style>

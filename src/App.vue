@@ -1,6 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <!--在App.vue中使用HelloWorld组件-->
+  <!--在App.vue中使用自定义的组件-->
   <IndexHeader></IndexHeader>
   <IndexPage></IndexPage>
   <IndexFooter></IndexFooter>
@@ -23,8 +22,8 @@ export default {
 }
 </script>
 
-<!--方便进行-->
-<style lang="less">
+<!--使用less，方便进行样式的设置，但是需要安装less和less-loader-->
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
