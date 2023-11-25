@@ -1,18 +1,24 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <!--在App.vue中使用HelloWorld组件-->
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <IndexHeader></IndexHeader>
+  <IndexPage></IndexPage>
+  <IndexFooter></IndexFooter>
 </template>
 
 <script>
-// 导入HelloWorld.vue组件
-import HelloWorld from './components/HelloWorld.vue'
+// 导入拆分编写的vue组件
+import IndexHeader from "@/components/IndexHeader";
+import IndexFooter from "@/components/IndexFooter";
+import IndexPage from "@/components/IndexPage";
 
 export default {
   name: 'App',
   // 搭配import xxx from xxx共同使用
   components: {
-    HelloWorld
+    IndexHeader,
+    IndexFooter,
+    IndexPage
   }
 }
 </script>
