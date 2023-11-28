@@ -1,11 +1,11 @@
 <template>
-
   <nav>
     <!--router-link：生成超链接-->
-    <router-link to="">Home</router-link>
-    <router-link to="">About</router-link>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
   </nav>
 
+  <!--router-view相当于占位符，使用不同的路由对应的Vue组件时，会渲染在该位置上-->
   <router-view/>
 
   <!--在App.vue中使用自定义的组件-->
@@ -27,6 +27,13 @@ export default {
     IndexHeader,
     IndexFooter,
     IndexPage
+  },
+  methods: {
+
+    routeJump() {
+      // 编程式的路由跳转方式，其中this.$router.push对应router-link标签中的to属性
+      this.$router.push('/')
+    }
   }
 }
 </script>
