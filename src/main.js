@@ -9,6 +9,9 @@ import {createRoute} from "vue-router/src/util/route";
 import App from '@/App.vue'
 import SubmitBtn from "@/components/SubmitBtn";
 
+
+// TODO: Vue路由是不是没有像后端发送请求呢？
+// 配置路由
 const route = createRoute(
     {
         mode: 'history',
