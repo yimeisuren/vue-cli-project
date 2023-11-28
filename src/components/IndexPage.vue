@@ -57,22 +57,24 @@ export default {
     },
 
     sendXhr() {
-      // 发送axios请求
+      // 发送ajax请求
       axios.request(
           {
             url: '/user',
             baseURL: 'https://www.baidu.com/api',
             method: 'get',
             data: {
-              // 传递给后端的数据
+              // 通过请求体传递给后端的数据，后端使用@RequestBody进行接收
               username: 'root',
               password: 'root'
             },
-            params: {}
+            params: {},
+            headers: {}
           }
       ).then((response) => {
         // 请求成功
         console.log(response);
+        //  可以在这里面再次发送ajax请求
       }).catch((exception) => {
         // 产生异常
         console.log(exception);
