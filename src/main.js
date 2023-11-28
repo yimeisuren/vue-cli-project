@@ -11,20 +11,26 @@ import SubmitBtn from "@/components/SubmitBtn";
 import HelloWorld from '@/components/HelloWorld'
 
 
-
-const routes = [
-    // 设置路由
-    {path: '/', component: HelloWorld},
-    {path: '/users', component: HelloWorld}
-]
-
 // TODO: Vue路由是不是没有像后端发送请求呢？
 // Vue3.0版本需要搭配VueRouter4.0版本
 // 配置路由
 const router = createRouter({
     // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
     history: createWebHashHistory(),
-    routes, // `routes: routes` 的缩写
+    routes: [
+        // 设置路由
+        {path: '/', component: HelloWorld},
+        {path: '/users', component: HelloWorld},
+        {
+            path: '/404',
+            component: () => import('@/views/404View')
+        },
+        {
+            //Vue3换了一种写法：https://router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes
+            path: '/:pathMatch(.*)*',
+            redirect: '/404'
+        }
+    ]
 })
 
 // 5. 创建并挂载根实例
