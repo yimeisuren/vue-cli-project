@@ -1,4 +1,13 @@
 <template>
+
+  <nav>
+    <!--router-link：生成超链接-->
+    <router-link to="">Home</router-link>
+    <router-link to="">About</router-link>
+  </nav>
+
+  <router-view/>
+
   <!--在App.vue中使用自定义的组件-->
   <IndexHeader></IndexHeader>
   <IndexPage></IndexPage>
